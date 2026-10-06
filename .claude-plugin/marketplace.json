@@ -1,0 +1,24 @@
+{
+  "name": "rowen-web-dev",
+  "description": "Rowen's web-development skill for Claude",
+  "owner": {
+    "name": "Rowen"
+  },
+  "plugins": [
+    {
+      "name": "rowen-web-dev",
+      "description": "An opinionated web-development skill for designing, building, debugging, securing, testing and shipping custom websites and web apps without the generic AI-generated look.",
+      "version": "4.1.0",
+      "author": {
+        "name": "Rowen"
+      },
+      "homepage": "https://github.com/0-Ghostly-0/rowen-web-dev",
+      "repository": "https://github.com/0-Ghostly-0/rowen-web-dev",
+      "license": "MIT",
+      "keywords": ["web", "frontend", "design", "nextjs", "vercel", "accessibility", "security"],
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/rowen-web-dev"]
+    }
+  ]
+}
