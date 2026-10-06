@@ -4,6 +4,10 @@ A Claude skill for building websites and web apps that look designed for their p
 
 `SKILL.md` is a short router. It tells Claude which module to read for the task in front of it, such as a bug, a checkout form or a launch review, so the detailed guidance stays out of context until it's needed.
 
+It's free to download, use, change and share, including in commercial work, under the [MIT license](LICENSE).
+
+**[Download rowen-web-dev.zip](https://github.com/0-Ghostly-0/rowen-web-dev/raw/main/rowen-web-dev.zip)**
+
 ## Install
 
 ### Claude Code, as a plugin
@@ -30,7 +34,7 @@ It's then available as `/rowen-web-dev`. To share it with everyone working in on
 
 ### Claude.ai and the Claude apps
 
-Make a ZIP of the `skills/rowen-web-dev` folder so the ZIP contains a `rowen-web-dev` folder with `SKILL.md` inside it. In Claude, open Customize > Skills, click +, choose Create skill, then Upload a skill, and pick the ZIP. Skills need "Code execution and file creation" turned on under Settings > Capabilities.
+Download [rowen-web-dev.zip](https://github.com/0-Ghostly-0/rowen-web-dev/raw/main/rowen-web-dev.zip) and keep it zipped. In Claude, open Customize > Skills, click +, choose Create skill, then Upload a skill, and pick the ZIP. Skills need "Code execution and file creation" turned on under Settings > Capabilities.
 
 ## What's inside
 
@@ -54,6 +58,16 @@ Your own request and your project's existing design and architecture always come
 - **4.1**: hover animations have to ease back to their resting state when the pointer leaves, instead of snapping back.
 - **4.0**: added taste calibration, a restrained motion system, component-level polish, production edge cases, rendered visual design review and the anti-overengineering gate.
 - **3.0**: brought in useful principles from public Claude and agent skills, with conflicts settled in favour of this skill's priorities. `research/merged-skill-decisions.md` lists what was taken and what was left out.
+
+## Updating the skill
+
+Edit the files in `skills/rowen-web-dev`, raise `version` in `.claude-plugin/marketplace.json` (plugin users only receive a new copy when it changes), commit, then rebuild the download from that commit:
+
+```bash
+git -c core.autocrlf=false archive --format=zip --prefix=rowen-web-dev/ -o rowen-web-dev.zip HEAD:skills/rowen-web-dev
+```
+
+Commit the new ZIP along with the changes.
 
 ## License
 
